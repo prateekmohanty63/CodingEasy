@@ -19,10 +19,8 @@ from django.urls import path,include
 from . import views
 
 urlpatterns = [
-    path('auth', include("Auth.urls")),
-    path('dashboard', include("DashBoard.urls")),
-    path('home', include("Home.urls")),
     path('admin/', admin.site.urls),
+<<<<<<< HEAD
     path('',views.index,name='index'),
     # path('contact',views.contact,name='contact'),
     path('login',views.registerPage,name='registerPage'),
@@ -43,4 +41,8 @@ urlpatterns = [
     path('cpp1',views.cpp1,name='cpp1'),
     path('ml',views.ml,name='ml'),
     path('course_video',views.course_video,name='course_video')
+=======
+    path('', include('Home.urls')),
+    
+>>>>>>> master
 ]
